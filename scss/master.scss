@@ -1,5 +1,5 @@
 //Farben
-$farbe1: #FFFFFF;
+$weiss: #FFFFFF;
 $farbe2: #2E2E2E;
 $grey: #E6E6E6;
 $farbe4: #707070;
@@ -9,9 +9,42 @@ $farbe4: #707070;
   padding: 0;
   margin: 0;
 }
-body{
-  background: blue;
+img{
+  width: 100%;
+  height: auto;
 }
+/*----------Header----------*/
+header{
+  width: 100%;
+  height: 100px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 99999;
+}
+/*----------Subheader-------*/
+.subheader{
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+}
+.subheader article.sliderArticle{
+  width: 100%;
+  height: 100vh;
+  position: relative;
+  color: $weiss;
+}
+.subheader article.sliderArticle .sliderImg{
+  width: auto;
+  height: 100%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  z-index: -1;
+}
+/*----------Footer----------*/
+
 footer{
   background:$grey;
 }

@@ -1,0 +1,31 @@
+//Farben
+$farbe1: #FFFFFF;
+$farbe2: #2E2E2E;
+$grey: #E6E6E6;
+$farbe4: #707070;
+
+
+*{
+  padding: 0;
+  margin: 0;
+}
+body{
+  background: blue;
+}
+footer{
+  background:$grey;
+}
+.claim{
+  width: 100%;
+  height: 30px;
+  display: -webkit-flex;
+  display: -ms-flex;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+/*----------Wrapper----------*/
+.wrapper{
+  width: 95%;
+  margin: 0 auto;
+}

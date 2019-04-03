@@ -2,8 +2,9 @@ let navStatus = false;
 
 function onLoaded() {
   function toggleMenu(){
-    let btn = document.querySelector(".mobileBTN"),
-        menu = document.querySelector('.menuClass');
+    var btn = document.getElementById('mobiletoogle');
+    var menu = document.querySelector(".menuClass");
+
     if (navStatus = true) {
       menu.style.height="0";
       console.log('a');
@@ -14,6 +15,6 @@ function onLoaded() {
       navStatus = true;
     }
   }
-  btn.addEventListener('click',toggleMenu);
+  document.getElementById('mobiletoogle').addEventListener('click',toggleMenu);
 }
 document.addEventListener('DOMContentLoaded',onLoaded);

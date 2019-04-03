@@ -88,7 +88,11 @@ header{
 .slidebBar{
   width: 100%;
   height: 5px;
+  position: absolute;
+  bottom: 0;
+  left: 0;
   background: rgba(255, 255, 255, .5);
+  z-index: 99;
 }
 .subheader article.sliderArticle{
   width: 100%;

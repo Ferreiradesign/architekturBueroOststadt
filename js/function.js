@@ -1,20 +1,33 @@
 let navStatus = false;
-
 function onLoaded() {
-  function toggleMenu(){
-    var btn = document.getElementById('mobiletoogle');
-    var menu = document.querySelector(".menuClass");
+  //Slider
 
-    if (navStatus = true) {
-      menu.style.height="0";
-      console.log('a');
-      navStatus = false;
+  //Fixed navigation
+  let nav = document.querySelector("nav.navPage");
+  let topOfNav = nav.offsetTop;
+  function fixNav() {
+    if (window.scrollY > topOfNav) {
+      document.body.classList.add("fixed");
+    //  document.body.style.paddingTop = nav.offsetHeight + "px";
     } else {
-      menu.style.height="auto";
-      console.log('b');
+      document.body.classList.remove("fixed");
+    //  document.body.style.paddingTop = 0;
+    }
+  }
+  window.addEventListener('scroll',fixNav);
+
+  //navigation toggle
+  let navToogle = document.querySelector(".mobileBtn");
+  let getNavList = document.querySelector("ul.menuClass");
+  function toogleNav() {
+    if (navStatus == true) {
+      getNavList.style.height='0';
+      navStatus = false;
+    }else {
+      getNavList.style.height='auto';
       navStatus = true;
     }
   }
-  document.getElementById('mobiletoogle').addEventListener('click',toggleMenu);
+  navToogle.addEventListener('click',toogleNav);
 }
 document.addEventListener('DOMContentLoaded',onLoaded);

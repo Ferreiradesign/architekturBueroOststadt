@@ -113,6 +113,15 @@ header{
   padding-top: 40vh;
 }
 /*------Navigation----------*/
+.fixed nav.navPage{
+  margin: 0;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: $weiss;
+  z-index: 9999999;
+
+}
 nav.navPage{
   width: 100%;
   height: auto;
@@ -129,6 +138,48 @@ nav.navPage .banner{
   flex-direction: row;
   background: $weiss;
 }
+ul.menuClass{
+  width: 100%;
+  height: 0;
+  overflow:hidden;
+  margin-top: 1em;
+}
+ul.menuClass li{
+  width: 100%;
+  padding: .5em 0em;
+  margin-bottom: .5em;
+  text-align: center;
+  list-style: none;
+  transition: ease-in 1s;
+}
+ul.menuClass li:hover{
+  background: grey;
+}
+ul.menuClass li:hover a{
+  color:$weiss;
+}
+ul.menuClass li:last-of-type{
+  margin: 0;
+}
+ul.menuClass li a{
+  text-transform: uppercase;
+}
+/*----------postBlog----------*/
+article.postBlog{
+  height: 400px;
+  position: relative;
+  overflow: hidden;
+  margin-bottom: 2em;
+}
+article.postBlog img{
+  height: 200px;
+  width: auto;
+}
+article.postBlog p{
+  font-size: 10px;
+  line-height: 14px;
+  color:$darkgrey;
+}
 /*----------Footer----------*/
 
 footer{
@@ -142,6 +193,13 @@ footer{
   display: flex;
   justify-content: center;
   align-items: center;
+}
+.claim p{
+  font-family: futura-pt, sans-serif;
+  font-weight: 500;
+  font-style: normal;
+  text-transform: uppercase;
+  font-size: 10px;
 }
 /*----------Wrapper----------*/
 .wrapper{

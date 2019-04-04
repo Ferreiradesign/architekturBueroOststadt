@@ -205,25 +205,53 @@ article.postBlog p{
   article.postBlog{
     height: 300px;
   }
-  article.postBlog:hover .thumbnail{
-    width: 100%;
-  }
-  article.postBlog:hover .thumbnail img{
-    width: 100%;
-  }
+
+
   article.postBlog .thumbnail{
     width: 50%;
     height: 300px;
     overflow: hidden;
     position: relative;
+    transition: ease-in .75s;
   }
-
-  article.postBlog .thumbnail img{
-    min-width: 200%;
-    height: 300px;
+  article.postBlog:hover .thumbnail{
+    width: 100%;
+  }
+  article.postBlog .overhaule{
+    width: 0;
+    height: 100%;
     position: absolute;
     top: 0;
     left: 0;
+    background: rgba(0,0,0,.7);
+    transition: ease-in .55s;
+  }
+  article.postBlog:hover .overhaule{
+    width: 100%;
+  }
+
+  article.postBlog .thumbnail img{
+    min-width: 758px;
+    position: absolute;
+    top:0%;
+    left: 0%;
+  }
+  article.postBlog:hover .thumbnail img{
+    width: 100%;
+  }
+
+  .contentContainer{
+    width: 50%;
+    height: auto;
+    padding: 1em;
+    box-sizing: border-box;
+    position: absolute;
+    top: 25%;
+    right: 0;
+    transition: ease-in .65s;
+  }
+  article.postBlog:hover .contentContainer, article.postBlog:hover .contentContainer p, article.postBlog:hover .contentContainer a{
+    color:$weiss;
   }
 }
 /*----------Footer----------*/
@@ -272,16 +300,16 @@ nav.footerNav ul li{
 .small04{width:95%;}
 
 @media screen and (min-width:768px) {
-.medium01,.medium02,.medium03,.medium04,.medium05,.medium06,.medium07,.medium08{
-  margin: 0 1.041666666666667%;
-}
-.medium01{width:10.416666666666667%;}
-.medium02{width:22.916666666666667%;}
-.medium03{width:35.416666666666667%;}
-.medium04{width:47.916666666666667%;}
-.medium05{width:60.416666666666667%;}
-.medium06{width:71.246819338422392%;}
-.medium07{width:85.416666666666667%;}
-.medium08{width:97.916666666666667%;}
+  .medium01,.medium02,.medium03,.medium04,.medium05,.medium06,.medium07,.medium08{
+    margin: 0 1.041666666666667%;
+  }
+  .medium01{width:10.416666666666667%;}
+  .medium02{width:22.916666666666667%;}
+  .medium03{width:35.416666666666667%;}
+  .medium04{width:47.916666666666667%;}
+  .medium05{width:60.416666666666667%;}
+  .medium06{width:71.246819338422392%;}
+  .medium07{width:85.416666666666667%;}
+  .medium08{width:97.916666666666667%;}
 
 }

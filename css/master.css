@@ -228,27 +228,56 @@ article.postBlog p {
     height: 300px;
   }
 
+  article.postBlog .thumbnail {
+    width: 50%;
+    height: 300px;
+    overflow: hidden;
+    position: relative;
+    transition: ease-in 0.75s;
+  }
+
   article.postBlog:hover .thumbnail {
     width: 100%;
+  }
+
+  article.postBlog .overhaule {
+    width: 0;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.7);
+    transition: ease-in 0.55s;
+  }
+
+  article.postBlog:hover .overhaule {
+    width: 100%;
+  }
+
+  article.postBlog .thumbnail img {
+    min-width: 758px;
+    position: absolute;
+    top: 0%;
+    left: 0%;
   }
 
   article.postBlog:hover .thumbnail img {
     width: 100%;
   }
 
-  article.postBlog .thumbnail {
+  .contentContainer {
     width: 50%;
-    height: 300px;
-    overflow: hidden;
-    position: relative;
+    height: auto;
+    padding: 1em;
+    box-sizing: border-box;
+    position: absolute;
+    top: 25%;
+    right: 0;
+    transition: ease-in 0.65s;
   }
 
-  article.postBlog .thumbnail img {
-    min-width: 200%;
-    height: 300px;
-    position: absolute;
-    top: 0;
-    left: 0;
+  article.postBlog:hover .contentContainer, article.postBlog:hover .contentContainer p, article.postBlog:hover .contentContainer a {
+    color: #FFFFFF;
   }
 }
 /*----------Footer----------*/

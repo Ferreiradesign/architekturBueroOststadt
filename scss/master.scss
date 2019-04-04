@@ -101,12 +101,21 @@ header{
 }
 .slidebBar{
   width: 100%;
-  height: 5px;
+  height: 10px;
   position: absolute;
   bottom: 0;
   left: 0;
   background: rgba(255, 255, 255, .5);
   z-index: 99;
+}
+.slideStatus{
+  width: 50%;
+  height: 10px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: rgba(0, 0, 0, .75);
+
 }
 .subheader article.sliderArticle{
   width: 100%;
@@ -115,7 +124,6 @@ header{
   color: $weiss;
 }
 .subheader article.sliderArticle .sliderImg{
-  width: auto;
   height: 100%;
   position: absolute;
   top: 50%;
@@ -193,6 +201,31 @@ article.postBlog p{
   line-height: 14px;
   color:$darkgrey;
 }
+@media screen and (min-width:768px) {
+  article.postBlog{
+    height: 300px;
+  }
+  article.postBlog:hover .thumbnail{
+    width: 100%;
+  }
+  article.postBlog:hover .thumbnail img{
+    width: 100%;
+  }
+  article.postBlog .thumbnail{
+    width: 50%;
+    height: 300px;
+    overflow: hidden;
+    position: relative;
+  }
+
+  article.postBlog .thumbnail img{
+    min-width: 200%;
+    height: 300px;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+}
 /*----------Footer----------*/
 
 footer{
@@ -228,4 +261,27 @@ nav.footerNav ul li{
   width: 95%;
   margin: 0 auto;
   position: relative;
+}
+/*-----------Grid------------*/
+.small01, .small02, .small03, .small04{
+  margin: 0% 2.5%;
+}
+.small01{width:20%;}
+.small02{width:42.352941176470588%;}
+.small03{width:70%;}
+.small04{width:95%;}
+
+@media screen and (min-width:768px) {
+.medium01,.medium02,.medium03,.medium04,.medium05,.medium06,.medium07,.medium08{
+  margin: 0 1.041666666666667%;
+}
+.medium01{width:10.416666666666667%;}
+.medium02{width:22.916666666666667%;}
+.medium03{width:35.416666666666667%;}
+.medium04{width:47.916666666666667%;}
+.medium05{width:60.416666666666667%;}
+.medium06{width:71.246819338422392%;}
+.medium07{width:85.416666666666667%;}
+.medium08{width:97.916666666666667%;}
+
 }

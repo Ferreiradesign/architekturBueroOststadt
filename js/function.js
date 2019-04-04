@@ -4,14 +4,15 @@ function onLoaded() {
 
   //Fixed navigation
   let nav = document.querySelector("nav.navPage");
+  let magi = document.querySelector("section.blog");
   let topOfNav = nav.offsetTop;
   function fixNav() {
     if (window.scrollY > topOfNav) {
       document.body.classList.add("fixed");
-    //  document.body.style.paddingTop = nav.offsetHeight + "px";
+      magi.style.paddingTop = nav.offsetHeight + "px";
     } else {
       document.body.classList.remove("fixed");
-    //  document.body.style.paddingTop = 0;
+      magi.style.paddingTop = 0;
     }
   }
   window.addEventListener('scroll',fixNav);

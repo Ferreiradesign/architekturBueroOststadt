@@ -61,10 +61,24 @@ a.btn{
   margin-top: 2em;
   padding: 0em 1em;
   border-bottom: 2px white solid;
-  color: #FFFFFF;
+  color: $weiss;
   display: block;
   width: 24%;
   text-align: center;
+}
+a.btn-blog{
+  margin-top: 2em;
+  padding: 0em 1em;
+  border: 2px white solid;
+  border-bottom: 2px #707070 solid;
+  color: #707070;
+  display: block;
+  width: 24%;
+  text-align: center;
+  transition: 1s;
+}
+a.btn-blog:hover{
+  border: 2px #707070 solid;
 }
 img{
   width: 100%;
@@ -166,14 +180,13 @@ ul.menuClass li a{
 }
 /*----------postBlog----------*/
 article.postBlog{
-  height: 400px;
+  height: auto;
   position: relative;
   overflow: hidden;
   margin-bottom: 2em;
 }
 article.postBlog img{
-  height: 200px;
-  width: auto;
+  width: 100%;
 }
 article.postBlog p{
   font-size: 10px;
@@ -199,7 +212,16 @@ footer{
   font-weight: 500;
   font-style: normal;
   text-transform: uppercase;
+  color: $darkgrey;
   font-size: 10px;
+}
+nav.footerNav ul{
+  list-style: none;
+
+}
+nav.footerNav ul li{
+  text-align: center;
+  margin-bottom: .5em;
 }
 /*----------Wrapper----------*/
 .wrapper{

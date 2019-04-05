@@ -1,3 +1,4 @@
+@charset "UTF-8";
 @import url("https://use.typekit.net/eqt2vwq.css");
 * {
   padding: 0;
@@ -71,17 +72,12 @@ a.btn {
 a.btn-blog {
   margin-top: 2em;
   padding: 0em 1em;
-  border: 2px white solid;
-  border-bottom: 2px #707070 solid;
+  position: relative;
   color: #707070;
   display: block;
   width: 24%;
   text-align: center;
   transition: 1s;
-}
-
-a.btn-blog:hover {
-  border: 2px #707070 solid;
 }
 
 img {
@@ -162,7 +158,6 @@ nav.navPage {
 }
 
 nav.navPage .banner {
-  width: 100%;
   height: 40px;
   display: -webkit-flex;
   display: -ms-flex;
@@ -174,7 +169,6 @@ nav.navPage .banner {
 }
 
 ul.menuClass {
-  width: 100%;
   height: 0;
   overflow: hidden;
   margin-top: 1em;
@@ -205,12 +199,26 @@ ul.menuClass li a {
   text-transform: uppercase;
 }
 
+@media screen and (min-width: 960px) {
+  #mobiletoogle {
+    display: none;
+  }
+
+  ul.menuClass {
+    height: 40px;
+    margin-top: 0;
+  }
+
+  ul.menuClass li {
+    width: auto;
+    display: inline-block;
+  }
+}
 /*----------postBlog----------*/
 article.postBlog {
   height: auto;
   position: relative;
   overflow: hidden;
-  margin-bottom: 2em;
 }
 
 article.postBlog img {
@@ -236,7 +244,29 @@ article.postBlog p {
     transition: ease-in 0.75s;
   }
 
+  article.postBlog:nth-child(even) .thumbnail {
+    float: right;
+  }
+
   article.postBlog:hover .thumbnail {
+    width: 100%;
+  }
+
+  article.postBlog .thumbnail img {
+    min-width: 758px;
+    position: absolute;
+    top: 0%;
+  }
+
+  article.postBlog:nth-child(even) .thumbnail img {
+    right: 0%;
+  }
+
+  article.postBlog:nth-child(odd) .thumbnail img {
+    left: 0%;
+  }
+
+  article.postBlog:hover .thumbnail img {
     width: 100%;
   }
 
@@ -245,23 +275,19 @@ article.postBlog p {
     height: 100%;
     position: absolute;
     top: 0;
-    left: 0;
     background: rgba(0, 0, 0, 0.7);
     transition: ease-in 0.55s;
   }
 
+  article.postBlog:nth-child(even) .overhaule {
+    right: 0;
+  }
+
+  article.postBlog:nth-child(odd) .overhaule {
+    left: 0;
+  }
+
   article.postBlog:hover .overhaule {
-    width: 100%;
-  }
-
-  article.postBlog .thumbnail img {
-    min-width: 758px;
-    position: absolute;
-    top: 0%;
-    left: 0%;
-  }
-
-  article.postBlog:hover .thumbnail img {
     width: 100%;
   }
 
@@ -276,13 +302,23 @@ article.postBlog p {
     transition: ease-in 0.65s;
   }
 
+  article.postBlog:nth-child(even) .contentContainer {
+    left: 0;
+  }
+
   article.postBlog:hover .contentContainer, article.postBlog:hover .contentContainer p, article.postBlog:hover .contentContainer a {
     color: #FFFFFF;
+  }
+}
+@media screen and (min-width: 960px) {
+  article.postBlog .thumbnail img {
+    width: 960px;
   }
 }
 /*----------Footer----------*/
 footer {
   background: #E6E6E6;
+  margin-top: 2em;
 }
 
 .claim {
@@ -313,16 +349,44 @@ nav.footerNav ul li {
   margin-bottom: 0.5em;
 }
 
+@media screen and (min-width: 960px) {
+  nav.footerNav ul {
+    list-style: none;
+    margin: 0 auto 1em auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 90%;
+  }
+}
 /*----------Wrapper----------*/
 .wrapper {
   width: 95%;
+  max-width: 1196px;
   margin: 0 auto;
   position: relative;
+}
+
+/*----------Clearfix---------*/
+.clearfix::before,
+.clearfix::after {
+  content: " ";
+  display: table;
+}
+
+.clearfix::after {
+  clear: both;
+}
+
+.clearfix {
+  *zoom: 1;
+  /* Für den IE6 und IE7 */
 }
 
 /*-----------Grid------------*/
 .small01, .small02, .small03, .small04 {
   margin: 0% 2.5%;
+  float: left;
 }
 
 .small01 {
@@ -344,6 +408,7 @@ nav.footerNav ul li {
 @media screen and (min-width: 768px) {
   .medium01, .medium02, .medium03, .medium04, .medium05, .medium06, .medium07, .medium08 {
     margin: 0 1.0416666667%;
+    float: left;
   }
 
   .medium01 {
@@ -376,6 +441,61 @@ nav.footerNav ul li {
 
   .medium08 {
     width: 97.9166666667%;
+  }
+}
+@media screen and (min-width: 960px) {
+  .grid01, .grid02, .grid03, .grid04, .grid05, .grid06, .grid07, .grid08, .grid09, .grid10, .grid11, .grid12 {
+    float: left;
+    margin: 0 0.6688963211%;
+  }
+
+  /*1196px*/
+  .grid01 {
+    width: 7.6086956522%;
+  }
+
+  .grid02 {
+    width: 15.8862876254%;
+  }
+
+  .grid03 {
+    width: 24.1638795987%;
+  }
+
+  .grid04 {
+    width: 32.4414715719%;
+  }
+
+  .grid05 {
+    width: 40.7190635452%;
+  }
+
+  .grid06 {
+    width: 48.9966555184%;
+  }
+
+  .grid07 {
+    width: 57.2742474916%;
+  }
+
+  .grid08 {
+    width: 65.5518394649%;
+  }
+
+  .grid09 {
+    width: 73.8294314381%;
+  }
+
+  .grid10 {
+    width: 82.1070234114%;
+  }
+
+  .grid11 {
+    width: 90.3846153846%;
+  }
+
+  .grid12 {
+    width: 98.6622073579%;
   }
 }
 

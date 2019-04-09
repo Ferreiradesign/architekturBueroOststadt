@@ -1,6 +1,5 @@
 let navStatus = false;
 function onLoaded() {
-  //Slider
 
   //Fixed navigation
   let nav = document.querySelector("nav.navPage");

@@ -65,19 +65,18 @@ a.btn {
   border-bottom: 2px white solid;
   color: #FFFFFF;
   display: block;
-  width: 24%;
   text-align: center;
 }
 
 a.btn-blog {
   margin-top: 2em;
-  padding: 0em 1em;
   position: relative;
   color: #707070;
   display: block;
-  width: 24%;
+  width: 120px;
   text-align: center;
   transition: 1s;
+  border-bottom: 2px #707070 solid;
 }
 
 img {
@@ -129,6 +128,7 @@ header {
 }
 
 .subheader article.sliderArticle .sliderImg {
+  width: auto;
   height: 100%;
   position: absolute;
   top: 50%;
@@ -169,6 +169,7 @@ nav.navPage .banner {
 }
 
 ul.menuClass {
+  width: 100%;
   height: 0;
   overflow: hidden;
   margin-top: 1em;
@@ -219,6 +220,7 @@ article.postBlog {
   height: auto;
   position: relative;
   overflow: hidden;
+  margin-bottom: 2em;
 }
 
 article.postBlog img {
@@ -315,6 +317,29 @@ article.postBlog p {
     width: 960px;
   }
 }
+/*----------SINGLE----------*/
+.headerGraphic {
+  width: 100%;
+  height: 371px;
+  overflow: hidden;
+  position: relative;
+}
+
+.thumbnail {
+  width: 100%;
+  height: 371px;
+  position: absolute;
+}
+
+.thumbnail img {
+  width: 100%;
+  height: auto;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
 /*----------Footer----------*/
 footer {
   background: #E6E6E6;

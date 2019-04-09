@@ -63,18 +63,18 @@ a.btn{
   border-bottom: 2px white solid;
   color: $weiss;
   display: block;
-  width: 24%;
   text-align: center;
 }
 a.btn-blog{
   margin-top: 2em;
-  padding: 0em 1em;
   position: relative;
   color: #707070;
   display: block;
-  width: 24%;
+  width: 120px;
   text-align: center;
   transition: 1s;
+  border-bottom: 2px $darkgrey solid;
+
 }
 
 img{
@@ -121,6 +121,7 @@ header{
   color: $weiss;
 }
 .subheader article.sliderArticle .sliderImg{
+  width: auto;
   height: 100%;
   position: absolute;
   top: 50%;
@@ -157,6 +158,7 @@ nav.navPage .banner{
   background: $weiss;
 }
 ul.menuClass{
+  width: 100%;
   height: 0;
   overflow:hidden;
   margin-top: 1em;
@@ -200,6 +202,7 @@ article.postBlog{
   height: auto;
   position: relative;
   overflow: hidden;
+  margin-bottom: 2em;
 }
 article.postBlog img{
   width: 100%;
@@ -213,8 +216,6 @@ article.postBlog p{
   article.postBlog{
     height: 300px;
   }
-
-
   article.postBlog .thumbnail{
     width: 50%;
     height: 300px;
@@ -228,7 +229,6 @@ article.postBlog p{
   article.postBlog:hover .thumbnail{
     width: 100%;
   }
-
   article.postBlog .thumbnail img{
     min-width: 758px;
     position: absolute;
@@ -260,7 +260,6 @@ article.postBlog p{
   article.postBlog:hover .overhaule{
     width: 100%;
   }
-
   .contentContainer{
     width: 50%;
     height: auto;
@@ -284,8 +283,27 @@ article.postBlog p{
 
   }
 }
+/*----------SINGLE----------*/
+.headerGraphic{
+  width: 100%;
+  height: 371px;
+  overflow: hidden;
+  position: relative;
+}
+.thumbnail{
+  width: 100%;
+  height: 371px;
+  position: absolute;
+}
+.thumbnail img{
+  width: 100%;
+  height: auto;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform:translate(-50%,-50%);
+}
 /*----------Footer----------*/
-
 footer{
   background:$grey;
   margin-top: 2em;
@@ -390,6 +408,4 @@ nav.footerNav ul li{
   .grid10{width:82.107023411371237%;}
   .grid11{width:90.384615384615385%;}
   .grid12{width:98.662207357859532%;}
-
-
 }
